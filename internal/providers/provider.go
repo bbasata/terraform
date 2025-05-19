@@ -104,6 +104,9 @@ type Interface interface {
 	// CallFunction calls a provider-contributed function.
 	CallFunction(CallFunctionRequest) CallFunctionResponse
 
+	// ListResource queries the remote for a specific resource type
+	ListResource(ListResourceRequest) error
+
 	// Close shuts down the plugin process if applicable.
 	Close() error
 }
